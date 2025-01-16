@@ -1,3 +1,11 @@
+# Declare GOOGLE_CREDENTIALS as a variable
+variable "GOOGLE_CREDENTIALS" {
+  type        = string
+  description = "The JSON credentials for the Google Cloud provider."
+  sensitive   = true
+}
+
+
 data "google_compute_image" "ubuntu" {
   most_recent = true
   project     = "ubuntu-os-cloud" 
